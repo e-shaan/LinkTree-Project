@@ -4,30 +4,63 @@
     <link rel="stylesheet" href="/static/styles.css" />
 
 
+
 </head>
 <body>
+ <script rel="text/javascript"  src="/static/index.js" />
+</script>
+<form action="/#" METHOD = "POST" >
+
+    click button to display form
+
+    enter form details
+    enter from data base
+
+    <input type="submit" value="Submit">
+</form>    
 
 
 
-    <button class="collapsible">Open Section 1</button>
-    <div class="content" >
-        <div class="btn-group">
-          <a  href="https://www.instagram.com/" target="_blank">Apple</a>
-          <a>Samsung</a>
-          <a>Sony</a>
-        </div>
-     </div>
-  <button class="collapsible">Open Section 1</button>
-  <div class="content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<button class="collapsible">Open Section 1</button>
+<div class="content" >
+    <div class="btn-group">
+      <a  href="https://www.instagram.com/" target="_blank">Apple</a>
+      <a>Samsung</a>
+      <a>Sony</a>
+
+      <a onclick="openForm()">Open Form</a>
   </div>
-  <button class="collapsible">Open Section 1</button>
-  <div class="content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>  
+</div>
+<button class="collapsible">Open Section 1</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible">Open Section 1</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>  
 
 
-  <script>
+
+<div class="form-popup" id="myForm">
+  <form action="#" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+
+
+<script type="text/javascript">
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
@@ -42,7 +75,21 @@
             } 
         });
     }
+
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 </script>
+
+
+
+
+
 
 
 </body>
